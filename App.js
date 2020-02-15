@@ -49,16 +49,6 @@ export default class App extends React.Component {
       });
 
     /*
-     * If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:
-     * */
-    const notificationOpen = await firebase
-      .notifications()
-      .getInitialNotification();
-    if (notificationOpen) {
-      const {title, body} = notificationOpen.notification;
-      this.showAlert(title, body);
-    }
-    /*
      * Triggered for data only payload in foreground
      * */
     this.messageListener = firebase.messaging().onMessage(message => {
@@ -93,7 +83,6 @@ export default class App extends React.Component {
 
       if (fcmToken) {
         // user has a device token
-        console.log(fcmToken);
         await AsyncStorage.setItem('fcmToken', fcmToken);
       }
     }
