@@ -1,5 +1,5 @@
 {
-  "name": "RNFirebaseStarter",
+  "name": "trote",
   "version": "5.4.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "postinstall": "npx jetify"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.7.1",
     "jetifier": "^1.6.4",
     "react": "16.8.6",
     "react-native": "0.60.5",

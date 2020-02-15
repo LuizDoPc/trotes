@@ -1,4 +1,4 @@
-package com.invertase.rnfirebasestarter;
+package com.sarradinha.trote;
 
 import androidx.multidex.MultiDexApplication;
 
